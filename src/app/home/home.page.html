@@ -1,14 +1,39 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Skeleton UI
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of items" href="https://codeswag.co.uk/shop">
+      <ion-avatar>
+        <img src="../../assets/codeswag.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ item }}</h2>
+        <p style="font-weight: bold;">www.codeswag.co.uk</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, perspiciatis assumenda ipsum blanditiis maiores sint, itaque deleniti hic eveniet officia, nostrum ex? At amet soluta quod, ex deleniti dolore doloremque!</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- <div class="spinner-container">
+    <ion-spinner *ngIf="!items.length > 0"></ion-spinner>
+  </div> -->
+
+  <!-- <div *ngIf="!items.length > 0">
+    <ion-item *ngFor="let item of [1,2,3,4,5,6,7]">
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3><ion-skeleton-text animated style="width: 15%"></ion-skeleton-text></h3>
+        <p><ion-skeleton-text animated style="width: 25%"></ion-skeleton-text></p>
+        <p><ion-skeleton-text animated style="width: 85%"></ion-skeleton-text></p>
+      </ion-label>
+    </ion-item>
+  </div> -->
 </ion-content>
